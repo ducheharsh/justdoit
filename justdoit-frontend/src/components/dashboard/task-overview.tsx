@@ -12,7 +12,7 @@ export function TaskOverview() {
 
   const stats = [
     { title: "Completed", value: completed, icon: CheckCircle, color: "text-green-500" },
-    { title: "In Progress", value: 13, icon: Clock, color: "text-blue-500" },
+    { title: "In Progress", value: 0, icon: Clock, color: "text-blue-500" },
     { title: "Overdue", value: overdue, icon: AlertCircle, color: "text-red-500" },
   ]
 
