@@ -1,8 +1,10 @@
 ```
-npm install
-npm run dev
+bun install
+bun run dev
 ```
 
 ```
-npm run deploy
+bun run deploy
 ```
+
+Note: wrangler.json file is ignored due to security reasons (env)
