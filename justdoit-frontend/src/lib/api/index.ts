@@ -123,16 +123,25 @@ export class AuthAPI {
     delete api.defaults.headers.common['Authorization']
   }
 
-  static async checkAuth() {
-    const token = localStorage.getItem('token');
-    if (!token) {
-      throw new Error('No token found');
-    }else{
-      api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    static async checkAuth() {
+        const token = localStorage.getItem('token');
+        
+        if (!token) {
+            throw new Error('No token found');
+        }
+        
+        // Set token in interceptor instead
+        api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+        
+        try {
+            const { data } = await api.get('/auth/me');
+            return data;
+        } catch (error) {
+            localStorage.removeItem('token'); // Clear invalid token
+            throw error;
+        }
     }
-    const { data } = await api.get('/auth/me')
-    return data
-  }
+
 
   static initializeAuth(): void {
     const token = localStorage.getItem('token');

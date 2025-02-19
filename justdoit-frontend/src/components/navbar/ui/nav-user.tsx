@@ -108,17 +108,17 @@ export function NavUser({
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem onClick={() => {
-              toast.promise(
-                () => logout.mutateAsync(),
+            <DropdownMenuItem onClick={async () => {
+              await toast.promise(
+                logout.mutateAsync(),
                 {
                   loading: "🥲 Logging out...",
                   success: "Logged out",
                   error: "Failed to log out",
                 }
-
-              )
-              router.push("/auth")
+              ).then(() => {
+                router.push("/auth")
+              })
             }
             }>
               <LogOut />

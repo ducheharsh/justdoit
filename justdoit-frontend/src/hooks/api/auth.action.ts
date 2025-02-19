@@ -74,10 +74,10 @@ export const useSignOut = () => {
   });
 }
 
-export const useAuthCheck = () =>{
-  return useQuery({
-    queryKey: ['user'],
-    queryFn: AuthAPI.checkAuth,
-  });
-
-}
+export const useAuthCheck = (options = {}) => {
+    return useQuery({
+        queryKey: ['auth', 'user'],
+        queryFn: AuthAPI.checkAuth,
+        ...options
+    });
+};
