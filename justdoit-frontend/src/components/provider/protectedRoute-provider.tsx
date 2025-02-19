@@ -8,7 +8,7 @@ import Loader from '../ui/loader';
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
     const router = useRouter();
     const [isInitialized, setIsInitialized] = useState(false);
-    const { isError, isLoading, isSuccess, error } = useAuthCheck({
+    const { isError, isLoading, isSuccess } = useAuthCheck({
         retry: false, // Prevent unnecessary retries
         staleTime: 30000, // Cache results for 30 seconds
         cacheTime: 60000, // Keep in cache for 1 minute
