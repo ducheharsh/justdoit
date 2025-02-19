@@ -9,7 +9,7 @@ const Loader = (
             {/* Logo and App Name */}
             <div className="flex items-center mb-4">
                 <span className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-                    Just Do it ☑️
+                    Just Do It ☑️
                 </span>
             </div>
 

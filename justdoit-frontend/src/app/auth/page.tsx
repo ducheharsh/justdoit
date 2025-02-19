@@ -33,11 +33,7 @@ export default function AuthPage() {
       </div>
       <div className="relative hidden bg-muted lg:block">
         <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-blue-500 opacity-90"></div>
-        <img
-          src="/placeholder.svg?height=1080&width=1920"
-          alt="Motivational task management"
-          className="absolute inset-0 h-full w-full object-cover mix-blend-overlay"
-        />
+
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
           <h2 className="text-4xl font-bold mb-4">Make It Happen</h2>
           <p className="text-xl max-w-md text-center">
