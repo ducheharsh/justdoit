@@ -1,6 +1,9 @@
 # JustDoIt
 
 JustDoIt is a project aimed at helping you manage tasks efficiently and effectively. This project allows you to create, edit, delete, and organize your tasks to improve productivity.
+<p align="center">
+  <img width="full" height="300" src="https://github.com/user-attachments/assets/5e145213-9d4d-4ba9-bd36-782081232137">
+</p>
 
 ## Features
 
@@ -23,14 +26,17 @@ To install and run this project locally, follow these steps:
     ```bash
     cd justdoit
     ```
-3. Install the dependencies:
+3. Install the dependencies for frontend:
     ```bash
-    npm install
+    cd justdoit-frontend
+    pnpm install
     ```
-4. Run the application:
+4. Install the dependencies for backend:
     ```bash
-    npm start
+    cd justdoit-api
+    bun install
     ```
+
 
 ## Usage
 
